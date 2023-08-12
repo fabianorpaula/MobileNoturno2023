@@ -5,13 +5,18 @@ using UnityEngine;
 public class Movimento : MonoBehaviour
 {
     private float tempo;
+    public bool TipoDeMovimento = true;
     
     void Update()
     {
         tempo += Time.deltaTime;
         if(tempo > 0.001f)
         {
-            Mover();
+            if(TipoDeMovimento == true)
+            {
+                Mover();
+            }
+            
         }
         
         
@@ -20,6 +25,7 @@ public class Movimento : MonoBehaviour
 
     void Mover()
     {
+
         if (Input.GetMouseButton(0))
         {
             //Captura a Posição do Mouse
@@ -37,10 +43,25 @@ public class Movimento : MonoBehaviour
 
     public void MoverD()
     {
-        Debug.Log("Mandou Mover D");
+        if(TipoDeMovimento == false)
+        {
+            //Destino Final Corrigido
+            Vector3 dFinal = new Vector3(2, -3f, 0);
+            //Mover Objeto
+            transform.position = Vector3.MoveTowards(transform.position, dFinal, 0.1f);
+        }
+       
+
     }
     public void MoverE()
     {
-        Debug.Log("Mandou Mover E");
+        if (TipoDeMovimento == false)
+        {
+            //Destino Final Corrigido
+            Vector3 dFinal = new Vector3(-2, -3f, 0);
+            //Mover Objeto
+            transform.position = Vector3.MoveTowards(transform.position, dFinal, 0.1f);
+        }
+
     }
 }
