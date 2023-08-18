@@ -6,6 +6,7 @@ public class GameControlador : MonoBehaviour
 {
 
     public float pontos;
+    public int vidas = 3;
 
     void Start()
     {
@@ -26,5 +27,15 @@ public class GameControlador : MonoBehaviour
     public float MostrarPontos()
     {
         return pontos;
+    }
+
+    public void SofreuDano()
+    {
+        vidas--;
+    }
+
+    public string MostrarVidas()
+    {
+        return vidas.ToString();
     }
 }

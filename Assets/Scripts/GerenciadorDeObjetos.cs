@@ -37,7 +37,11 @@ public class GerenciadorDeObjetos : MonoBehaviour
             Vector3 novaPos = new Vector3(posX, 6, 0);
             int esferaEscolhida = 0;
             int tipoEsfera = Random.Range(0, 101);
-            if (tipoEsfera < 80)
+            if (tipoEsfera < 10)
+            {
+                esferaEscolhida = 4;
+            }
+            else if (tipoEsfera < 80)
             {
                 esferaEscolhida = 0;
             }
