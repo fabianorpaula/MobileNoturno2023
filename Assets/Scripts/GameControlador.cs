@@ -7,6 +7,7 @@ public class GameControlador : MonoBehaviour
 
     public float pontos;
     public int vidas = 3;
+    private bool gameState = true;
 
     void Start()
     {
@@ -32,10 +33,25 @@ public class GameControlador : MonoBehaviour
     public void SofreuDano()
     {
         vidas--;
+        if(vidas < 1)
+        {
+            Morrer();
+        }
     }
 
     public string MostrarVidas()
     {
         return vidas.ToString();
+    }
+
+    public void Morrer()
+    {
+        Time.timeScale = 0;
+        gameState = false;
+    }
+
+    public bool InformaEstado()
+    {
+        return gameState;
     }
 }

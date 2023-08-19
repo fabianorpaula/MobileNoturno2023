@@ -6,17 +6,27 @@ public class Movimento : MonoBehaviour
 {
     private float tempo;
     public bool TipoDeMovimento = true;
-    
+
+    private GameControlador GC;
+
+    private void Start()
+    {
+        GC = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControlador>();
+    }
+
     void Update()
     {
-        tempo += Time.deltaTime;
-        if(tempo > 0.001f)
+        if (GC.InformaEstado() == true)
         {
-            if(TipoDeMovimento == true)
+            tempo += Time.deltaTime;
+            if (tempo > 0.001f)
             {
-                Mover();
+                if (TipoDeMovimento == true)
+                {
+                    Mover();
+                }
+
             }
-            
         }
         
         

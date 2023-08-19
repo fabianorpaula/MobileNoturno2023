@@ -8,10 +8,21 @@ public class GerenciadorDeObjetos : MonoBehaviour
     public GameObject Bola;
     public float meuTempo;
 
+    private GameControlador GC;
+
+    private void Start()
+    {
+        GC = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControlador>();
+    }
+
     void Update()
     {
         //CriarBola();
-        CriarBolaDificil();
+        if(GC.InformaEstado() == true)
+        {
+            CriarBolaDificil();
+        }
+        
     }
 
     void CriarBola()
