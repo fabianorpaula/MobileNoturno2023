@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2073055384}
+      - m_Target: {fileID: 2016272615}
         m_TargetAssemblyTypeName: Propaganda, Assembly-CSharp
         m_MethodName: ShowRewardedAd
         m_Mode: 1
@@ -2339,7 +2339,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796971456}
   m_CullTransparentMesh: 1
---- !u!1 &2073055383
+--- !u!1 &2016272614
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2347,8 +2347,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2073055385}
-  - component: {fileID: 2073055384}
+  - component: {fileID: 2016272616}
+  - component: {fileID: 2016272615}
   m_Layer: 0
   m_Name: Propaganda
   m_TagString: Untagged
@@ -2356,25 +2356,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2073055384
+--- !u!114 &2016272615
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073055383}
+  m_GameObject: {fileID: 2016272614}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbb3dc6a09759a346bebf09fadb30c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2073055385
+--- !u!4 &2016272616
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073055383}
+  m_GameObject: {fileID: 2016272614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9459572, y: 2.4831653, z: 0.07073998}
   m_LocalScale: {x: 1, y: 1, z: 1}

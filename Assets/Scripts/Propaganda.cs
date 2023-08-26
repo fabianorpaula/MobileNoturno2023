@@ -7,8 +7,12 @@ using GoogleMobileAds.Api;
 
 public class Propaganda : MonoBehaviour
 {
+
+    private GameControlador GC;
+
     public void Start()
     {
+        GC = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControlador>();
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize((InitializationStatus initStatus) =>
         {
@@ -75,7 +79,8 @@ public class Propaganda : MonoBehaviour
             rewardedAd.Show((Reward reward) =>
             {
                 // TODO: Reward the user.
-                Debug.Log("DEU CERTO");
+                GC.MaisUmaChance();
+                LoadRewardedAd();
             });
         }
     }
