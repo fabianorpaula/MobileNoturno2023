@@ -920,6 +920,11 @@ MonoBehaviour:
   pontos: 0
   vidas: 3
   Chance: {fileID: 1200366831}
+  MinhasSkins:
+  - {fileID: 21300000, guid: f3095a21af955ec40ac4375062c6121b, type: 3}
+  - {fileID: 21300000, guid: 34b257734e493c14d9ac74f75eedd5f7, type: 3}
+  - {fileID: 21300000, guid: cea81b8dc06a45a44bff9b4dce37b032, type: 3}
+  Jogador: {fileID: 0}
 --- !u!114 &515666900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,7 +937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a35dacc54c2d3418fb76f95cf1e3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coracoes: 0
   dinheiro: 0
+  minhaSkin: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

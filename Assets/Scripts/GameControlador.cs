@@ -11,11 +11,17 @@ public class GameControlador : MonoBehaviour
     private bool gameState = true;
     public GameObject Chance;
     private Banco meuBanco;
+    public List<Sprite> MinhasSkins;
+    public GameObject Jogador;
 
     void Start()
     {
         meuBanco = GetComponent<Banco>();
         vidas = vidas + meuBanco.RetornarCoracao();
+        Jogador = GameObject.FindGameObjectWithTag("Player");
+        int minhaSkinEscolhida = meuBanco.RetornaSkin();
+        Jogador.GetComponent<SpriteRenderer>().sprite = MinhasSkins[minhaSkinEscolhida];
+       
     }
 
     // Update is called once per frame

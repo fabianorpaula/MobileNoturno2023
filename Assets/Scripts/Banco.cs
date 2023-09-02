@@ -6,6 +6,7 @@ public class Banco : MonoBehaviour
 {
     public int coracoes;
     public int dinheiro;
+    public int minhaSkin;
 
     private void Start()
     {
@@ -48,5 +49,15 @@ public class Banco : MonoBehaviour
     {
 
         return PlayerPrefs.GetInt("Coracao");
+    }
+
+    public int RetornaSkin()
+    {
+        return PlayerPrefs.GetInt("Skin");
+    }
+
+    public void GravaSkin(int SkinEscolhida)
+    {
+        PlayerPrefs.SetInt("Skin", SkinEscolhida);
     }
 }
