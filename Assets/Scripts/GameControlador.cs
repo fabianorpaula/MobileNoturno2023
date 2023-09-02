@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameControlador : MonoBehaviour
 {
 
-    public float pontos;
+    public int pontos;
     public int vidas = 3;
     private bool gameState = true;
     public GameObject Chance;
+    private Banco meuBanco;
 
     void Start()
     {
-        
+        meuBanco = GetComponent<Banco>();
+        vidas = vidas + meuBanco.RetornarCoracao();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class GameControlador : MonoBehaviour
         Time.timeScale = 0;
         gameState = false;
         Chance.SetActive(true);
+        meuBanco.GuardaDinheiro(pontos);
     }
 
     public bool InformaEstado()
