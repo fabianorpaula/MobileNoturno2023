@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class GameControlador : MonoBehaviour
 {
+
+    
 
     public int pontos;
     public int vidas = 3;
@@ -27,7 +30,7 @@ public class GameControlador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void DarPontos(int valorX)
